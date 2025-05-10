@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EV Recharge Bunk</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+  <style>
+    body {
+      scroll-behavior: smooth;
+    }
+    section {
+      padding: 60px 20px;
+    }
+    .hero {
+      background: url('https://source.unsplash.com/1600x600/?electric-vehicle') center/cover no-repeat;
+      color: white;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      border-radius: 10px;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.4);
+    }
+    .modal-content {
+      background-color: #fff;
+      margin: 15% auto;
+      padding: 20px;
+      width: 60%;
+      border-radius: 10px;
+      position: relative;
+    }
+    .close {
+      position: absolute;
+      top: 10px; right: 20px;
+      font-size: 24px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="text-center p-4 text-white bg-primary">
+    <h1>Electric Vehicle Recharge Bunk</h1>
+  </header>
+
+  <nav class="nav nav-tabs justify-content-center bg-dark sticky-top">
+    <a class="nav-link text-white" href="#home">Home</a>
+    <a class="nav-link text-white" href="#about">About Us</a>
+    <a class="nav-link text-white" href="#services">Services</a>
+    <a class="nav-link text-white" href="#locations">Locations</a>
+    <a class="nav-link text-white" href="#contact">Contact</a>
+    <a class="nav-link text-white" href="#faqs">FAQs</a>
+  </nav>
+
+  <main class="container">
+    <!-- Home Section -->
+    <section id="home">
+      <div class="hero">
+        <h1>Welcome to EV Recharge Bunk</h1>
+        <p>Fast and convenient electric vehicle recharge services.</p>
+      </div>
+      <div class="text-center mt-4">
+        <button id="myBtn" class="btn btn-info">Read Our Mission</button>
+      </div>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Our mission is to accelerate EV adoption with fast, reliable recharging services across the country.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about">
+      <h2>About Us</h2>
+      <p>We are a team of EV enthusiasts committed to building the most accessible and eco-friendly recharging network across urban and rural India. Our company started in 2022 with a vision to reduce carbon emissions and make sustainable travel a reality.</p>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+      <h2>Services</h2>
+      <ul>
+        <li><strong>EV Charging:</strong> Fast, standard, and overnight charging stations.</li>
+        <li><strong>Battery Swapping:</strong> Instant swap facility for compatible EVs.</li>
+        <li><strong>Diagnostics & Maintenance:</strong> Regular EV health checks and servicing.</li>
+        <li><strong>Mobile Charging Vans:</strong> Emergency recharge services at your location.</li>
+      </ul>
+    </section>
+
+    <!-- Locations -->
+    <section id="locations">
+      <h2>Our Locations</h2>
+      <p>We are currently available in the following cities and expanding every month:</p>
+      <ul>
+        <li>Chennai, Tamil Nadu</li>
+        <li>Bangalore, Karnataka</li>
+        <li>Hyderabad, Telangana</li>
+        <li>Mumbai, Maharashtra</li>
+        <li>Delhi NCR</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Email: support@evrechargebunk.com</p>
+      <p>Phone: +91 98765 43210</p>
+      <p>Address: 123, EV Avenue, Green Tech Park, Chennai - 600001</p>
+      <form class="mt-3">
+        <div class="mb-2">
+          <input class="form-control" type="text" placeholder="Your Name" required />
+        </div>
+        <div class="mb-2">
+          <input class="form-control" type="email" placeholder="Your Email" required />
+        </div>
+        <div class="mb-2">
+          <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+        </div>
+        <button class="btn btn-success" type="submit">Send</button>
+      </form>
+    </section>
+
+    <!-- FAQs -->
+    <section id="faqs">
+      <h2>FAQs</h2>
+      <p><strong>Q1: How long does a full charge take?</strong></p>
+      <p>A1: Fast chargers take about 30 minutes to 1 hour for 80% charge, while standard charging may take 4–6 hours.</p>
+
+      <p><strong>Q2: Is there a mobile app to locate your stations?</strong></p>
+      <p>A2: Yes, download our "EV Recharge Bunk" app on iOS and Android for live location and availability tracking.</p>
+
+      <p><strong>Q3: Can I book a slot in advance?</strong></p>
+      <p>A3: Absolutely! Use our website or app to reserve your preferred time slot.</p>
+    </section>
+  </main>
+
+  <footer class="text-center bg-primary text-white py-3">
+    &copy; 2025 EV Recharge Bunk. All rights reserved.
+  </footer>
+
+  <script>
+    const modal = document.getElementById("myModal");
+    const btn = document.getElementById("myBtn");
+    const span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = () => modal.style.display = "block";
+    span.onclick = () => modal.style.display = "none";
+    window.onclick = (e) => {
+      if (e.target == modal) modal.style.display = "none";
+    };
+  </script>
+</body>
+</html>
